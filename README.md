@@ -11,10 +11,24 @@ The primary objective is to reduce manual deployment activities, improve deploym
 2. Project Objectives
 
 Implement source code management using Git and GitHub.
+
 Configure Jenkins to automate application build and deployment workflows.
+
 Containerize the application using Docker.
+
 Push and manage Docker images in Azure Container Registry.
+
 Deploy containerized applications to Azure Kubernetes Service.
+
 Understand the integration between CI/CD tools and Azure cloud services.
+
 Perform deployment verification and basic troubleshooting.
+
+3. Project Architecture
+
+The project follows a DevOps workflow connecting source code management, CI/CD automation, container image management, and Kubernetes deployment
+
+   <img width="1774" height="887" alt="architecture_diagam" src="https://github.com/user-attachments/assets/51ac5802-81e4-430c-88ea-728c77e564e9" />
+   
+
 
