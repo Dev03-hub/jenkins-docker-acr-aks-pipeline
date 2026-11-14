@@ -1,6 +1,6 @@
 # jenkins-docker-acr-aks-pipeline
 End-to-end DevOps CI/CD project using Git, Jenkins, Docker, Azure Container Registry (ACR), and Azure Kubernetes Service (AKS) to automate application build, containerization, and deployment.
-1. Project Overview
+## **1. Project Overview**
 
 This project demonstrates the implementation of an end-to-end DevOps CI/CD workflow to automate application build, containerization, image management, and deployment using Jenkins and Microsoft Azure services.
 
@@ -8,7 +8,7 @@ The project integrates Git for source code management, Jenkins for CI/CD automat
 
 The primary objective is to reduce manual deployment activities, improve deployment consistency, and demonstrate practical implementation of DevOps practices using cloud-native technologies.
 
-2. Project Objectives
+## **2. Project Objectives**
 
 Implement source code management using Git and GitHub.
 
@@ -24,11 +24,12 @@ Understand the integration between CI/CD tools and Azure cloud services.
 
 Perform deployment verification and basic troubleshooting.
 
-3. Project Architecture
+## **3. Project Architecture**
 
 The project follows a DevOps workflow connecting source code management, CI/CD automation, container image management, and Kubernetes deployment
 
    <img width="1774" height="887" alt="architecture_diagam" src="https://github.com/user-attachments/assets/51ac5802-81e4-430c-88ea-728c77e564e9" />
-   
+
+### **Technology Flow:**
 
 
