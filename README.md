@@ -125,8 +125,58 @@ Implementation activities:
 - Checking the Kubernetes Service configuration.
 <img width="1366" height="608" alt="Aks" src="https://github.com/user-attachments/assets/7bb725b3-54fd-4b85-9e11-efd930957fd9" />
 
+Once Connected with Azure Kubernetes service (AKS) CLI. We need to connect our Azure container registry (ACR) with AKS using the commands.
+**az acr show --name <ACR server id> --query id --output tsv**
 
+This Azure CLI command retrieves the Azure Container Registry (ACR) resource ID. which we attach to this command below.
 
+**az aks update -n <cluster_name> -g <azure_resource_group_name> --attach-acr <resource_id>**
+
+This gives your AKS cluster permission to pull Docker images from your private Azure Container Registry.
+
+<img width="1366" height="196" alt="mclsd" src="https://github.com/user-attachments/assets/28ce825e-7f48-4e9c-bbc5-91e4d8aa52f4" />
+
+### **Deployment Verification**
+
+After completing the deployment process, Kubernetes resources are inspected to verify the application status.
+
+Expected verification points:
+
+- Kubernetes nodes are in Ready state.
+- Application Pods are running successfully.
+- Deployment replicas match the configured requirements.
+- Kubernetes Service is configured correctly.
+- The application is accessible through its configured endpoint, where applicable.
+
+<img width="840" height="164" alt="kube_3" src="https://github.com/user-attachments/assets/0eb151d8-b014-41c4-b545-1193d5a4024e" />
+<img width="1354" height="281" alt="kube_1" src="https://github.com/user-attachments/assets/c1fac378-342d-41ac-9f32-efe21f295696" />
+<img width="1366" height="117" alt="kube_2" src="https://github.com/user-attachments/assets/8d4f35b1-c9f1-4b66-a5bc-5125a9657a8b" />
+
+### **Application Testing/output**
+
+Application running
+<img width="1366" height="444" alt="output" src="https://github.com/user-attachments/assets/93cbd900-5fef-47e2-b645-27dc717cccd0" />
+
+### **Key Learning Outcomes**
+
+Through this project, the following practical concepts were explored:
+
+- Source code management and version control using Git.
+- CI/CD automation and build management using Jenkins.
+- Container image creation and management using Docker.
+- Private container image storage using Azure Container Registry.
+- Kubernetes deployment and orchestration using AKS.
+- Azure resource management through Azure CLI.
+- Application deployment verification and troubleshooting.
+- Integration of multiple DevOps tools into a single workflow.
+
+### **Conclusion**
+
+This project demonstrates the integration of commonly used DevOps tools and Microsoft Azure services to establish an automated application delivery workflow.
+
+By combining Git, Jenkins, Docker, Azure Container Registry, and Azure Kubernetes Service, the project provides practical exposure to source code management, CI/CD automation, containerization, cloud infrastructure, and Kubernetes-based application deployment.
+
+The implementation serves as a foundation for understanding real-world DevOps workflows and further exploring cloud-native technologies, infrastructure automation, monitoring, and deployment optimization.
 
 
 
