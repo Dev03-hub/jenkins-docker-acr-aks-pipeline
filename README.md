@@ -127,7 +127,7 @@ Implementation activities:
 
 Once Connected with Azure Kubernetes service (AKS) CLI. We need to connect our Azure container registry (ACR) with AKS using the commands.
 
-**az acr show --name <ACR resource name> --query id --output tsv**
+**az acr show --name <ACR_resource_name> --query id --output tsv**
 
 This Azure CLI command retrieves the Azure Container Registry (ACR) resource ID. which we attach to this command below.
 
