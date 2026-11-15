@@ -32,4 +32,109 @@ The project follows a DevOps workflow connecting source code management, CI/CD a
 
 ### **Technology Flow:**
 
+GitHub → Jenkins → Docker → Azure Container Registry → Azure Kubernetes Service → Running Application
+
+### **Source Code Management Using Git**
+Git is used to manage application source code and track changes throughout the development process.
+
+GitHub acts as the remote repository for storing and maintaining project files.
+
+Key operations include:
+
+- Initializing the Git repository.
+- Adding and committing source code.
+- Pushing changes to GitHub.
+- Maintaining the application source code in a centralized repository.
+
+<img width="807" height="287" alt="fwef" src="https://github.com/user-attachments/assets/05ab59c1-af6b-4121-917a-e612abc4a093" />
+<img width="859" height="235" alt="vsdava" src="https://github.com/user-attachments/assets/d6757b86-1a53-4a14-b78b-7ea941649c17" />
+<img width="989" height="274" alt="vsdvaa" src="https://github.com/user-attachments/assets/67e2b018-59ce-4d13-924c-67cc8fb28981" />
+
+### **Jenkins Configuration and CI/CD Automation**
+Jenkins is configured to automate the application build and deployment workflow.
+
+The Jenkins job integrates with the GitHub repository to retrieve the latest application source code and execute the configured build operations.
+
+Key implementation activities:
+
+- Configuring Jenkins.
+- Integrating the GitHub repository.
+- Configuring the required build tools.
+- Executing application build operations.
+- Integrating Docker image creation into the workflow.
+- Configuring authentication for the required container registry.
+- Monitoring build execution through Jenkins console output.
+
+Jenkins helps reduce repetitive manual operations and provides visibility into the build process.
+
+**Use maven pipeline for java application**
+<img width="1366" height="615" alt="jen_1" src="https://github.com/user-attachments/assets/8a1fea8b-317a-4eac-a443-3631eb9313ee" />
+**Install Maven integration plugin**
+<img width="843" height="379" alt="jen_5" src="https://github.com/user-attachments/assets/128b3388-ec9a-411d-9196-cf76426602f2" />
+**Under configuration open post build shell script and write bash commands for docker image build.**
+<img width="842" height="379" alt="jen_6" src="https://github.com/user-attachments/assets/0ebef490-9865-41aa-8026-4fe332e136a5" />
+**Once Image is build, now tag and push to Azure container registry.**
+<img width="844" height="380" alt="jen_7" src="https://github.com/user-attachments/assets/ec9c2b1c-11db-499b-9435-1f84397e9412" />
+<img width="1366" height="611" alt="jen_4" src="https://github.com/user-attachments/assets/e46f8e58-0954-46f8-ba14-5731db90e9f3" />
+<img width="1366" height="607" alt="jen_2" src="https://github.com/user-attachments/assets/7d09feec-a45e-4f0e-b54e-eb5430988c98" />
+<img width="1366" height="610" alt="jen_3" src="https://github.com/user-attachments/assets/9adc47ab-43e7-42e4-a86b-cee31c455757" />
+
+### **Docker Containerization**
+
+Docker is used to package the application and its runtime dependencies into a portable container image.
+
+Once Image is build we can view our images on docker
+<img width="1366" height="403" alt="docker" src="https://github.com/user-attachments/assets/85cf6227-d899-43e4-829f-043d328e7e7f" />
+
+The resulting image is used for deployment to the Kubernetes environment.
+
+### **Azure Container Registry (ACR)**
+
+Azure Container Registry is used as the private container image repository for storing and managing application images.
+
+Implementation activities:
+
+- Creating an Azure Container Registry instance.
+- Configuring registry authentication.
+- Building the Docker image.
+- Tagging the image with the ACR login server.
+- Pushing the image to ACR.
+- Verifying the image and its tags in the Azure Portal.
+  
+<img width="1366" height="605" alt="acr_1" src="https://github.com/user-attachments/assets/71b2c77e-9974-4f75-8f50-789fecdf09ab" />
+<img width="1366" height="614" alt="acr_2" src="https://github.com/user-attachments/assets/6b0f6fe6-33f0-419b-8752-9299c726704d" />
+<img width="1366" height="614" alt="acr_3" src="https://github.com/user-attachments/assets/78eec0fc-47b7-4fe7-b9ba-30f293911049" />
+<img width="1366" height="611" alt="acr_4" src="https://github.com/user-attachments/assets/5ac4ae15-f9e0-4371-a62b-ea70276e2240" />
+**Once image is pused to ACR we can view the image under repo1 repository in myjavapp**
+<img width="1366" height="614" alt="acr_5" src="https://github.com/user-attachments/assets/fab329cc-07c2-49ce-b435-de361d68dd21" />
+
+### **Azure Kubernetes Service (AKS)**
+
+Azure Kubernetes Service is used to deploy and manage the containerized application.
+
+AKS provides a managed Kubernetes environment for application orchestration.
+
+Implementation activities:
+
+- Provisioning the AKS cluster.
+- Configuring Kubernetes access using Azure CLI.
+- Connecting to the cluster using kubectl.
+- Configuring the application deployment.
+- Deploying the application image from ACR.
+- Verifying application Pods and Deployments.
+- Checking the Kubernetes Service configuration.
+<img width="1366" height="608" alt="Aks" src="https://github.com/user-attachments/assets/7bb725b3-54fd-4b85-9e11-efd930957fd9" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 
